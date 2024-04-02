@@ -1,5 +1,6 @@
 package org.example.MapInterface;
 
+import java.util.SortedMap;
 import java.util.TreeMap;
 
 public class TreeMapEx {
@@ -18,5 +19,7 @@ public class TreeMapEx {
         treeMap.put(2.5, student5);
         System.out.println(treeMap);
 
+        SortedMap<Double, Student2> d = treeMap.tailMap(2.0);
+        System.out.println(d);
     }
 }

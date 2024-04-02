@@ -21,7 +21,7 @@ public class HashCodeEx2 {
     }
 }
 
-class Student2 {
+class Student2 implements Comparable <Student2>{
     String name;
     String surname;
     int course;
@@ -47,6 +47,12 @@ class Student2 {
         if (o == null || getClass() != o.getClass()) return false;
         Student2 student2 = (Student2) o;
         return course == student2.course && Objects.equals(name, student2.name) && Objects.equals(surname, student2.surname);
+    }
+
+
+    @Override
+    public int compareTo(Student2 o) {
+        return this.name.compareTo(o.name);
     }
 
 //    @Override
